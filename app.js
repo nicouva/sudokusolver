@@ -25,6 +25,10 @@ const joinValues = () => {
 
 
 const solve = () => {
+  joinValues()
+  const data = submission.join('')
+  console.log('data', data)
+
 
   var options = {
     method: 'POST',
@@ -39,9 +43,9 @@ const solve = () => {
     }
   };
 
-  axios.request(options).then(function (response) {
+  axios.request(options).then((response) => {
     console.log(response.data);
-  }).catch(function (error) {
+  }).catch((error) => {
     console.error(error);
   });
 }
